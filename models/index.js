@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { DATABASE } = require('../config');
-const Sequelize = require('sequelize');
+const { Sequelize } = require('sequelize');
 
 const Op = Sequelize.Op;
 
