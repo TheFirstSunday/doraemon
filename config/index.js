@@ -1,4 +1,4 @@
-const devMode = process.env.NODE_ENV === 'development'
+const devMode = process.env.NODE_ENV === 'development';
 
 const config = {
   PORT: 6060, // 启动端口
@@ -8,7 +8,7 @@ const config = {
     client_secret: '463f3994ab5687544b2cddbb6cf44920bf179ad9',
     access_token_url: 'https://github.com/login/oauth/access_token',
     fetch_user_url: 'https://api.github.com/user', // 用于 oauth2
-    fetch_user: 'https://api.github.com/users/' // fetch user url https://api.github.com/users/gershonv
+    fetch_user: 'https://api.github.com/users/', // fetch user url https://api.github.com/users/gershonv
   },
   EMAIL_NOTICE: {
     // 邮件通知服务
@@ -20,16 +20,16 @@ const config = {
       secure: true, // true for 465, false for other ports
       auth: {
         user: 'zhaonan266366@163.com', // generated ethereal user
-        pass: '123456' // generated ethereal password 授权码 而非 密码
-      }
+        pass: '123456', // generated ethereal password 授权码 而非 密码
+      },
     },
     subject: 'personal博客 - 您的评论获得新的回复！', // 主题
     text: '您的评论获得新的回复！',
-    WEB_HOST: 'http://127.0.0.1:3000' // email callback url
+    WEB_HOST: 'http://127.0.0.1:3000', // email callback url
   },
   TOKEN: {
     secret: 'sunday-blog', // secret is very important!
-    expiresIn: '720h' // token 有效期
+    expiresIn: '720h', // token 有效期
   },
   DATABASE: {
     database: 'doraemon',
@@ -42,44 +42,44 @@ const config = {
         max: 5,
         min: 0,
         acquire: 30000,
-        idle: 10000
+        idle: 10000,
       },
       define: {
         timestamps: false, // 默认不加时间戳
-        freezeTableName: true // 表名默认不加 s
+        freezeTableName: true, // 表名默认不加 s
       },
-      timezone: '+08:00'
-    }
-  }
-}
+      timezone: '+08:00',
+    },
+  },
+};
 
 // 部署的环境变量设置
 if (!devMode) {
-  console.log('env production....')
+  console.log('env production....');
 
   // ==== 配置数据库
   config.DATABASE = {
     ...config.DATABASE,
     database: '', // 数据库名
     user: '', // 账号
-    password: '' // 密码
-  }
+    password: '', // 密码
+  };
 
   // 配置 github 授权
-  config.GITHUB.client_id = ''
-  config.GITHUB.client_secret = ''
+  config.GITHUB.client_id = '';
+  config.GITHUB.client_secret = '';
 
   // ==== 配置 token 密钥
-  config.TOKEN.secret = ''
+  config.TOKEN.secret = '';
 
   // ==== 配置邮箱
 
   // config.EMAIL_NOTICE.enable = true
   config.EMAIL_NOTICE.transporterConfig.auth = {
     user: 'zhaonan266366@163.com', // generated ethereal user
-    pass: '123456XXX' // generated ethereal password 授权码 而非 密码
-  }
-  config.EMAIL_NOTICE.WEB_HOST = 'https://thefirstsunday.com'
+    pass: '123456XXX', // generated ethereal password 授权码 而非 密码
+  };
+  config.EMAIL_NOTICE.WEB_HOST = 'https://thefirstsunday.com';
 }
 
-module.exports = config
+module.exports = config;

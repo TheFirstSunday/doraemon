@@ -6,11 +6,18 @@
     "start": "cross-env NODE_ENV=development nodemon bin/www",
     "dev": "./node_modules/.bin/nodemon bin/www",
     "prd": "pm2 start bin/www",
-    "lint": "eslint src --ext js",
+    "prettier": "prettier -c --write \"{config, controllers, models, routes}/**/*\"",
+    "lint:prettier": "prettier --check \"{config, controllers, models, routes}/**/*\" --end-of-line auto",
+    "lint": "eslint --ext js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "lint-staged": {
-    "*.{js}": "eslint"
+    "*.{js}": [
+      "eslint --ext .js --fix"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "archiver": "^5.3.0",

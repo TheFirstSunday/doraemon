@@ -8,6 +8,7 @@
  */
 module.exports = {
   parser: 'babel-eslint',
+  extends: ['prettier', 'plugin:prettier/recommended'],
   parserOptions: {
     ecmaVersion: 2019,
     // ECMAScript modules 模式
@@ -15,9 +16,6 @@ module.exports = {
     ecmaFeatures: {
       // 不允许 return 语句出现在 global 环境下
       globalReturn: false,
-      // 开启全局 script 模式
-      impliedStrict: true,
-      jsx: true,
     },
     // 即使没有 babelrc 配置文件，也使用 babel-eslint 来解析
     requireConfigFile: false,
@@ -25,7 +23,7 @@ module.exports = {
     allowImportExportEverywhere: false,
   },
   env: {
-    browser: true,
+    browser: false,
     node: true,
     commonjs: true,
     es6: true,
@@ -949,5 +947,7 @@ module.exports = {
         onlyEquality: true,
       },
     ],
+    'no-confusing-arrow': 'error',
+    'object-curly-newline': 'error',
   },
 };
