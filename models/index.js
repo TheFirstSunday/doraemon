@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { DATABASE } = require('../config');
-const { Sequelize } = require('sequelize');
+const Sequelize = require('sequelize');
 
 const Op = Sequelize.Op;
 
@@ -20,7 +20,6 @@ const sequelize = new Sequelize(
       $gte: Op.gte,
       $gt: Op.gt,
       $lte: Op.lte,
-
       $lt: Op.lt,
       $not: Op.not,
       $in: Op.in,
