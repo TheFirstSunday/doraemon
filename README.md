@@ -7,5 +7,5 @@
 - server collection, includes blog、cms and so on.
 
 ```javascript
-koa + mysql + sequelize + GraphQL;
+koa + mysql + sequelize;
 ```
