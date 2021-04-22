@@ -7,18 +7,18 @@ const onerror = require('koa-onerror');
 const error = require('koa-json-error');
 const bodyparser = require('koa-bodyparser');
 const logger = require('koa-logger');
-const path = require('path');
 
-const index = require('./routes/index');
-const users = require('./routes/users');
 const loadRouter = require('./routes');
-const db = require('./models');
+const context = require('./utils/context');
 
 const app = new Koa();
 
 // error handler
 onerror(app);
 
+Object.keys(context).forEach((key) => {
+  app.context[key] = context[key]; // 绑定上下文对象
+});
 // moddlewares
 const authHandler = require('./middlewares/authHandler');
 

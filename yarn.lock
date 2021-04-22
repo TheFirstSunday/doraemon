@@ -972,7 +972,7 @@ component-emitter@^1.2.1:
 
 compress-commons@^4.1.0:
   version "4.1.0"
-  resolved "https://registry.npm.taobao.org/compress-commons/download/compress-commons-4.1.0.tgz#25ec7a4528852ccd1d441a7d4353cd0ece11371b"
+  resolved "https://registry.npm.taobao.org/compress-commons/download/compress-commons-4.1.0.tgz?cache=0&sync_timestamp=1614744084922&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcompress-commons%2Fdownload%2Fcompress-commons-4.1.0.tgz#25ec7a4528852ccd1d441a7d4353cd0ece11371b"
   integrity sha1-Jex6RSiFLM0dRBp9Q1PNDs4RNxs=
   dependencies:
     buffer-crc32 "^0.2.13"
@@ -1174,11 +1174,6 @@ dargs@^7.0.0:
   version "7.0.0"
   resolved "https://registry.npm.taobao.org/dargs/download/dargs-7.0.0.tgz#04015c41de0bcb69ec84050f3d9be0caf8d6d5cc"
   integrity sha1-BAFcQd4Ly2nshAUPPZvgyvjW1cw=
-
-dayjs@^1.10.4:
-  version "1.10.4"
-  resolved "https://registry.npm.taobao.org/dayjs/download/dayjs-1.10.4.tgz#8e544a9b8683f61783f570980a8a80eaf54ab1e2"
-  integrity sha1-jlRKm4aD9heD9XCYCoqA6vVKseI=
 
 debug@^2.2.0, debug@^2.3.3:
   version "2.6.9"
@@ -2876,7 +2871,7 @@ lodash.union@^4.6.0:
 
 lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.21, lodash@^4.17.4:
   version "4.17.21"
-  resolved "https://registry.npm.taobao.org/lodash/download/lodash-4.17.21.tgz?cache=0&sync_timestamp=1613835817439&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flodash%2Fdownload%2Flodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  resolved "https://registry.npm.taobao.org/lodash/download/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha1-Z5WRxWTDv/quhFTPCz3zcMPWkRw=
 
 log-symbols@^4.0.0:
@@ -3078,7 +3073,7 @@ moment-timezone@^0.5.21:
   dependencies:
     moment ">= 2.9.0"
 
-"moment@>= 2.9.0", moment@^2.24.0:
+"moment@>= 2.9.0", moment@^2.24.0, moment@^2.29.1:
   version "2.29.1"
   resolved "https://registry.npm.taobao.org/moment/download/moment-2.29.1.tgz#b2be769fa31940be9eeea6469c075e35006fa3d3"
   integrity sha1-sr52n6MZQL6e7qZGnAdeNQBvo9M=
@@ -4334,7 +4329,7 @@ table@^6.0.4:
 
 tar-stream@^2.2.0:
   version "2.2.0"
-  resolved "https://registry.npm.taobao.org/tar-stream/download/tar-stream-2.2.0.tgz#acad84c284136b060dc3faa64474aa9aebd77287"
+  resolved "https://registry.npm.taobao.org/tar-stream/download/tar-stream-2.2.0.tgz?cache=0&sync_timestamp=1609236328737&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftar-stream%2Fdownload%2Ftar-stream-2.2.0.tgz#acad84c284136b060dc3faa64474aa9aebd77287"
   integrity sha1-rK2EwoQTawYNw/qmRHSqmuvXcoc=
   dependencies:
     bl "^4.0.3"
@@ -4825,7 +4820,7 @@ yocto-queue@^0.1.0:
 
 zip-stream@^4.1.0:
   version "4.1.0"
-  resolved "https://registry.npm.taobao.org/zip-stream/download/zip-stream-4.1.0.tgz?cache=0&sync_timestamp=1614749662821&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fzip-stream%2Fdownload%2Fzip-stream-4.1.0.tgz#51dd326571544e36aa3f756430b313576dc8fc79"
+  resolved "https://registry.npm.taobao.org/zip-stream/download/zip-stream-4.1.0.tgz#51dd326571544e36aa3f756430b313576dc8fc79"
   integrity sha1-Ud0yZXFUTjaqP3VkMLMTV23I/Hk=
   dependencies:
     archiver-utils "^2.1.0"

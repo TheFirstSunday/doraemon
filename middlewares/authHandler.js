@@ -23,14 +23,12 @@ const verifyList2 = [
  */
 function checkAuth(method, url) {
   function _verify(list, role) {
-    const target = list.find((v) => {
+    return list.find((v) => {
       return (
         v.regexp.test(url) &&
         (v.required === 'all' || v.required.toUpperCase().includes(method))
       );
     });
-
-    return target;
   }
 
   const roleList = [];

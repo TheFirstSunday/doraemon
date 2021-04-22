@@ -201,23 +201,21 @@ class UserController {
       }
 
       if (type) {
-        where.github = parseInt(type) === 1 ? { $not: null } : null;
+        where.github = parseInt(type, 10) === 1 ? { $not: null } : null;
       }
 
       if (Array.isArray(rangeDate) && rangeDate.length === 2) {
         where.createdAt = { $between: rangeDate };
       }
 
-      const result = await UserModel.findAndCountAll({
+      // ctx.client(200, 'success', result)
+      ctx.body = await UserModel.findAndCountAll({
         where,
         offset: (page - 1) * pageSize,
-        limit: parseInt(pageSize),
+        limit: parseInt(pageSize, 10),
         row: true,
         order: [['createdAt', 'DESC']],
       });
-
-      // ctx.client(200, 'success', result)
-      ctx.body = result;
     }
   }
 
@@ -259,7 +257,7 @@ class UserController {
       if (typeof disabledDiscuss !== 'undefined') {
         await IpModel.update(
           { auth: !disabledDiscuss },
-          { where: { userId: parseInt(userId) } },
+          { where: { userId: parseInt(userId, 10) } },
         );
       }
       ctx.status = 204;

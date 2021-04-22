@@ -59,11 +59,10 @@ class ArticleController {
       } else {
         const tags = tagList.map((t) => ({ name: t }));
         const categories = categoryList.map((c) => ({ name: c }));
-        const data = await ArticleModel.create(
+        ctx.body = await ArticleModel.create(
           { title, content, authorId, tags, categories },
           { include: [TagModel, CategoryModel] },
         );
-        ctx.body = data;
       }
     }
   }
@@ -136,6 +135,9 @@ class ArticleController {
 
   // 获取文章列表
   static async getList(ctx) {
+    console.log('----------');
+    console.log(ctx);
+    console.log('----------');
     const validator = ctx.validate(ctx.query, {
       page: Joi.string(),
       pageSize: Joi.number(),

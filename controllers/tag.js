@@ -7,7 +7,7 @@ const {
 
 class TagController {
   static async getTagList(ctx) {
-    const data = await TagModel.findAll({
+    ctx.body = await TagModel.findAll({
       attributes: [
         'name',
         [sequelize.fn('COUNT', sequelize.col('name')), 'count'],
@@ -18,12 +18,10 @@ class TagController {
       },
       order: [[sequelize.fn('COUNT', sequelize.col('name')), 'desc']],
     });
-
-    ctx.body = data;
   }
 
   static async getCategoryList(ctx) {
-    const data = await CategoryModel.findAll({
+    ctx.body = await CategoryModel.findAll({
       attributes: [
         'name',
         [sequelize.fn('COUNT', sequelize.col('name')), 'count'],
@@ -34,8 +32,6 @@ class TagController {
       },
       order: [[sequelize.fn('COUNT', sequelize.col('name')), 'desc']],
     });
-
-    ctx.body = data;
   }
 }
 

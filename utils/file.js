@@ -24,7 +24,7 @@ function findOrCreateFilePath(filePath) {
         resolve(true);
       }
     } catch (error) {
-      reject(false);
+      reject(error);
     }
   });
 }
