@@ -6,6 +6,18 @@
 
 - server collection, includes blog、cms and so on.
 
+## Install
+
+```shell script
+  yarn or npm i
+```
+
+## Start
+
+```shell script
+    yarn start or npm run start
+```
+
 ```javascript
 koa + mysql + sequelize;
 ```
